@@ -856,6 +856,12 @@ background: linear-gradient(to right, #236BCF 0%, #F08CF5 100%);
     }
 }
 
+@media screen and (max-width: 468px) {
+    .floating-icons {
+        display: none;
+    }
+}
+
 .hero-content {
     position: relative;
     z-index: 1;
