@@ -860,6 +860,10 @@ background: linear-gradient(to right, #236BCF 0%, #F08CF5 100%);
     .floating-icons {
         display: none;
     }
+    .image-container 
+    {
+        display: none;
+    }
 }
 
 .hero-content {
