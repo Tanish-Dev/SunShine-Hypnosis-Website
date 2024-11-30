@@ -43,6 +43,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const hamburger = document.querySelector('.hamburger-menu');
     const mobileMenu = document.querySelector('.mobile-menu');
     const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+    const closeButton = document.querySelector('.close-button');
 
     // Toggle mobile menu
     hamburger.addEventListener('click', () => {
@@ -64,6 +65,18 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 targetElement.scrollIntoView({ behavior: 'smooth' });
             }
+        });
+    });
+
+    // Close menu when clicking close button
+    closeButton.addEventListener('click', function() {
+        mobileMenu.classList.remove('active');
+    });
+
+    // Close menu when clicking mobile nav links
+    mobileNavLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            mobileMenu.classList.remove('active');
         });
     });
 });

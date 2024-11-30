@@ -23,7 +23,7 @@
             <div class="nav-link" data-target="contact-section">CONTACT</div>
             <div class="nav-link" data-target="courses-section">COURSES</div>
         </div>
-        <button class="nav-button">Book Now</button>
+        <button class="nav-button" onclick="document.getElementById('courses-section').scrollIntoView({behavior: 'smooth'})">Book Now</button>
         <!-- Add hamburger menu button -->
         <div class="hamburger-menu">
             <span></span>
@@ -34,12 +34,13 @@
     
     <!-- Add mobile menu overlay -->
     <div class="mobile-menu">
+        <div class="close-button">×</div>
         <div class="mobile-menu-items">
             <div class="mobile-nav-link" data-target="about-section">ABOUT</div>
             <div class="mobile-nav-link" data-target="gallery-section">GALLERY</div>
             <div class="mobile-nav-link" data-target="contact-section">CONTACT</div>
             <div class="mobile-nav-link" data-target="courses-section">COURSES</div>
-            <button class="mobile-nav-button">Book Now</button>
+            <button class="mobile-nav-button" onclick="document.getElementById('courses-section').scrollIntoView({behavior: 'smooth'})">Book Now</button>
         </div>
     </div>
     
@@ -68,7 +69,7 @@
                     <img class="logo1" src="assets/Sunshine Hypno logo.jpg" alt="">
                     <h1 class="hero-title">Master the Art of <span class="gradient-text">Hypnosis</span></h1>
                     <p class="hero-subtitle">Transform minds. Change lives. Build your future.</p>
-                    <button class="button1">Book Now</button>
+                    <button class="button1" onclick="document.getElementById('courses-section').scrollIntoView({behavior: 'smooth'})">Book Now</button>
                 </div>
             </div>
         </div>
@@ -120,7 +121,7 @@
                     <h3 class="course-title">Basic Hypnotism</h3>
                     <p class="course-desc">Master the fundamental principles and techniques of hypnosis in this comprehensive foundational course.</p>
                     <div class="card-footer">
-                        <button class="course-btn">Learn more</button>
+                        <button class="course-btn" onclick="window.location.href='basichypnocourse.html'">Learn more</button>
                         <span class="duration">8 weeks</span>
                     </div>
                 </div>
@@ -137,7 +138,7 @@
                     <h3 class="course-title">Instant Hypnotism</h3>
                     <p class="course-desc">Learn rapid induction techniques and master the art of instant hypnotic influence.</p>
                     <div class="card-footer">
-                        <button class="course-btn">Learn more</button>
+                        <button class="course-btn" onclick="window.location.href='instanthypnotismcourse.html'">Learn more</button>
                         <span class="duration">6 weeks</span>
                     </div>
                 </div>
@@ -154,7 +155,7 @@
                     <h3 class="course-title">Clinical Hypnotism</h3>
                     <p class="course-desc">Advanced therapeutic techniques for professional practitioners and healthcare providers.</p>
                     <div class="card-footer">
-                        <button class="course-btn">Learn more</button>
+                        <button class="course-btn" onclick="window.location.href='clinicalhypnotismcourse.html'">Learn more</button>
                         <span class="duration">12 weeks</span>
                     </div>
                 </div>
@@ -258,19 +259,19 @@
             <div class="footer-column">
                 <h4>Quick Links</h4>
                 <ul class="footer-links">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#courses">Courses</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="index.html#about-section">About</a></li>
+                    <li><a href="index.html#courses-section">Courses</a></li>
+                    <li><a href="index.html#contact-section">Contact</a></li>
+                    <li><a href="index.html#blog-section">Blog</a></li>
                 </ul>
             </div>
             <div class="footer-column">
                 <h4>Programs</h4>
                 <ul class="footer-links">
-                    <li><a href="#basic">Basic Hypnotism</a></li>
-                    <li><a href="#instant">Instant Hypnotism</a></li>
-                    <li><a href="#clinical">Clinical Hypnotism</a></li>
-                    <li><a href="#workshops">Workshops</a></li>
+                    <li><a href="basichypnocourse.html">Basic Hypnotism</a></li>
+                    <li><a href="instanthypnotismcourse.html">Instant Hypnotism</a></li>
+                    <li><a href="clinicalhypnotismcourse.html">Clinical Hypnotism</a></li>
+                    <li><a href="index.html#workshops-section">Workshops</a></li>
                 </ul>
             </div>
             <div class="footer-column">
