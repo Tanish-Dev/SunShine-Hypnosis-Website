@@ -71,12 +71,16 @@ document.addEventListener('DOMContentLoaded', function() {
     // Close menu when clicking close button
     closeButton.addEventListener('click', function() {
         mobileMenu.classList.remove('active');
+        hamburger.classList.remove('active');
+        document.body.style.overflow = ''; // Restore scrolling
     });
 
     // Close menu when clicking mobile nav links
     mobileNavLinks.forEach(link => {
         link.addEventListener('click', function() {
             mobileMenu.classList.remove('active');
+            hamburger.classList.remove('active');
+            document.body.style.overflow = ''; // Restore scrolling
         });
     });
 });
