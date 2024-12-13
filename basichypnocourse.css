@@ -169,19 +169,7 @@ body {
     background: linear-gradient(to right, #236BCF, #F08CF5);
 }
 
-@media screen and (max-width: 650px) {
-    .child1 {
-        display: none;
-    }
-    
-    .hamburger-menu {
-        display: block;
-    }
-    
-    .mobile-menu {
-        display: block;
-    }
-}
+
 
 .child2 {
     font-size: 1.5vw;
@@ -228,7 +216,7 @@ body {
 
 .img2 {
     width: 100%;
-    height: 100%; /* Changed from fixed 400px to 100% */
+    height: 480px; /* Changed from fixed 400px to 100% */
     border-radius: 20px;
     overflow: hidden;
     position: relative;
@@ -329,7 +317,7 @@ body {
     color: #666;
     background: white;
     border-radius: 20px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12); /* Increased from 0.05 to 0.12 */
+    box-shadow: 0px 0px 15px rgb(0 0 0 / 8%); /* Increased from 0.05 to 0.12 */
 }
 
 @media screen  and (max-width: 800px) {
@@ -418,11 +406,53 @@ body {
     transform: translateY(-5px);
 }
 
+@media screen and (max-width: 650px) {
+    .child1 {
+        display: none;
+    }
+    
+    .hamburger-menu {
+        display: block;
+    }
+    
+    .mobile-menu {
+        display: block;
+    }
+    .img2 img
+    {
+        object-fit: contain;
+    }
+}
+
 .stars {
     color: #ffd700;
     font-size: 1.2rem;
     margin-bottom: 1rem;
 }
+
+
+.close-button {
+    position: absolute;
+    top: 0px;
+    right: 14px;
+    font-size: 50px; /* Increased from 40px */
+    color: rgb(51 51 51);
+    cursor: pointer;
+    z-index: 1001;
+    padding: 15px; /* Increased padding from 10px */
+    line-height: 0.7; /* Adjusted line height */
+    width: 50px; /* Added fixed width */
+    height: 50px; /* Added fixed height */
+    display: flex; /* Added for better centering */
+    align-items: center;
+    justify-content: center;
+}
+
+.close-button:hover {
+    opacity: 0.8;
+}
+
+
 
 .review-text {
     color: #666;
@@ -482,7 +512,7 @@ body {
     max-width: 1200px; /* Changed from 900px to match container2 */
     margin: 40px auto; /* Reduced from 60px */
     padding: 1.5rem; /* Reduced from 2rem */
-
+    display: none;
     border-radius: 24px;
     box-shadow: 
         0 4px 24px rgba(35, 107, 207, 0.12),
