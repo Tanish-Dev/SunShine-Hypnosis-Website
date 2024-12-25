@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - Sunshine Hypnosis Academy</title>
+    <link rel="stylesheet" href="admin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="admin-layout">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <a href="../index.html" class="home-link" title="Back to Homepage">
+                    <img src="../assets/Sunshine Hypno logo copy.jpg" alt="Logo" class="sidebar-logo">
+                </a>
+                <h2>Admin Panel</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-item active">
+                    <i class="fas fa-home"></i>
+                    Dashboard
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-book"></i>
+                    Courses
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-users"></i>
+                    Students
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-certificate"></i>
+                    Certificates
+                </a>
+                <a href="#" class="nav-item">
+                    <i class="fas fa-cog"></i>
+                    Settings
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search...">
+                </div>
+                <div class="user-menu">
+                    <span class="user-name">Admin User</span>
+                    <button class="logout-btn">
+                        <i class="fas fa-sign-out-alt"></i>
+                        Logout
+                    </button>
+                </div>
+            </header>
+
+            <div class="dashboard-content">
+                <!-- Stats Cards -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-details">
+                            <h3>Total Students</h3>
+                            <p>256</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <div class="stat-details">
+                            <h3>Active Courses</h3>
+                            <p>12</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <div class="stat-details">
+                            <h3>Certifications</h3>
+                            <p>189</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Course Management Section -->
+                <div class="content-grid">
+                    <section class="course-section">
+                        <div class="section-header">
+                            <h2>Course Management</h2>
+                            <button class="add-btn">
+                                <i class="fas fa-plus"></i>
+                                Add Course
+                            </button>
+                        </div>
+                        <div class="course-list">
+                            <div class="course-item">
+                                <img src="../assets/11098.jpg" alt="Basic Hypnotism">
+                                <div class="course-info">
+                                    <h3>Basic Hypnotism</h3>
+                                    <p>8 weeks course</p>
+                                </div>
+                                <div class="course-actions">
+                                    <button class="edit-btn"><i class="fas fa-edit"></i></button>
+                                    <button class="delete-btn"><i class="fas fa-trash"></i></button>
+                                </div>
+                            </div>
+                            <!-- More course items can be added here -->
+                        </div>
+                    </section>
+
+                    <!-- Recent Activity Section -->
+                    <section class="activity-section">
+                        <h2>Recent Activity</h2>
+                        <div class="activity-list">
+                            <div class="activity-item">
+                                <i class="fas fa-user-plus"></i>
+                                <div class="activity-info">
+                                    <p>New student enrolled</p>
+                                    <span>2 minutes ago</span>
+                                </div>
+                            </div>
+                            <!-- More activity items can be added here -->
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="data.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>

@@ -1635,3 +1635,64 @@ background: linear-gradient(to right, #236BCF 0%, #F08CF5 100%);
     opacity: 0.8;
 }
 
+/* Add these styles at the end of the file */
+.admin-link {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.admin-link::before {
+    content: '\f023';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    font-size: 0.8rem;
+    color: #236BCF;
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.admin-link:hover::before {
+    opacity: 1;
+    transform: translateX(2px);
+}
+
+/* Add these styles near your footer styles */
+.admin-access {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.admin-portal-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: transparent;
+    color: #236BCF;
+    border: 1px solid #236BCF;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.admin-portal-btn i {
+    font-size: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+.admin-portal-btn:hover {
+    background: linear-gradient(45deg, #236BCF, #F08CF5);
+    color: white;
+    border-color: transparent;
+    transform: translateY(-2px);
+}
+
+.admin-portal-btn:hover i {
+    transform: rotate(-10deg);
+}
+
