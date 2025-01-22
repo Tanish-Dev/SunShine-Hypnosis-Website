@@ -7,8 +7,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
+    <script src="index.js" ></script>
     <script src="script.js" defer></script>
-    <link style="border-radius: 25px;" rel="icon" type="image/x-icon" href="assets/Sunshine Hypno logo copy.jpg">
+    <link style="border-radius: 25px;" rel="icon" type="image/x-icon" href="assets/Sunshine Hypno logo-photoaidcom-cropped.jpg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <title>Dashboard</title>
 </head>
@@ -17,14 +18,13 @@
         <div class="logo-container">
             <img src="assets/Sunshine Hypno logo copy.jpg" alt="Logo" class="header-logo">
         </div>
-        <div class="child1">
-            <div class="nav-link" data-target="about-section">ABOUT</div>
-            <div class="nav-link" data-target="courses-section">COURSES</div>
-            <div class="nav-link" data-target="gallery-section">GALLERY</div>
-            <div class="nav-link" data-target="contact-section">CONTACT</div>
-        </div>
-        <button class="nav-button" onclick="document.getElementById('courses-section').scrollIntoView({behavior: 'smooth'})">Book Now</button>
-        <!-- Add hamburger menu button -->
+        <nav class="child1">
+            <a href="#about-section" class="nav-link" data-section="about-section">ABOUT</a>
+            <a href="#courses-section" class="nav-link" data-section="courses-section">COURSES</a>
+            <a href="#gallery-section" class="nav-link" data-section="gallery-section">GALLERY</a>
+            <a href="#contact-section" class="nav-link" data-section="contact-section">CONTACT</a>
+        </nav>
+        <a href="#contact" class="nav-button"></a>
         <div class="hamburger-menu">
             <span></span>
             <span></span>
@@ -35,10 +35,10 @@
     <div class="mobile-menu">
         <div class="close-button">×</div>
         <div class="mobile-menu-items">
-            <div class="mobile-nav-link" data-target="about-section">ABOUT</div>
-            <div class="mobile-nav-link" data-target="gallery-section">GALLERY</div>
-            <div class="mobile-nav-link" data-target="contact-section">CONTACT</div>
-            <div class="mobile-nav-link" data-target="courses-section">COURSES</div>
+            <a href="#about-section" class="mobile-nav-link" data-section="about-section">ABOUT</a>
+            <a href="#courses-section" class="mobile-nav-link" data-section="courses-section">COURSES</a>
+            <a href="#gallery-section" class="mobile-nav-link" data-section="gallery-section">GALLERY</a>
+            <a href="#contact-section" class="mobile-nav-link" data-section="contact-section">CONTACT</a>
             <button class="mobile-nav-button whatsapp-button" onclick="window.location.href='https://wa.me/917719852969'">
                 <i class="fab fa-whatsapp"></i>
                 Book on WhatsApp
@@ -83,18 +83,16 @@
             </div>
             <div class="desc1">
                 <span class="greeting">Hello,</span>
-                I'm Yogesh, and I am excited to invite you to a life-changing workshop: 
-                <span class="workshop-name">"The Power of Hypnosis"</span>
+                I'm Yogesh, and I am excited to invite you to a life-changing workshop:                <span class="workshop-name">"The Power of Hypnosis"</span>
                 <p class="workshop-desc">
-                    Discover the secrets of building a stable additional income using hypnosis 
-                    - all while keeping your 9-to-5 job!
-                </p>
+                    Discover the secrets of building a stable additional income using hypnosis - all while keeping your 9-to-5 job!                </p>
+            
             </div>
-            <button class="button2" onclick="document.getElementById('experience-section').scrollIntoView({behavior: 'smooth'})">Learn more</button>
+            <button class="button2" onclick="openIntroModal()">Learn more</button>
         </div>
         <div class="sub2">
             <div class="profile-image">
-                <img src="assets/20943559.jpg" alt="Yogesh Ahire">
+                <img src="assets/d (1).jpg" alt="Yogesh Ahire">
             </div>
             <div class="title2">
                 Yogesh Ahire
@@ -104,6 +102,59 @@
             </div>
         </div>
     </div>
+    <div class="intro-modal" id="introModal">
+        <div class="intro-content">
+            <span class="intro-close" onclick="closeIntroModal()">&times;</span>
+            <div class="intro-header">
+                <h2>Meet <span class="gradient-text">Mr. Yogesh Ahire</span></h2>
+                <div class="intro-subtitle">Founder & Lead Trainer at Sunshine Hypnosis Academy</div>
+            </div>
+            <div class="intro-body">
+                <div class="intro-image">
+                    <img src="assets/d (4).jpg" alt="Yogesh Ahire">
+                </div>
+                <div class="intro-text">
+                    <p>Mr. Yogesh Ahire is a certified trainer, clinical hypnotherapist, mind reader and healer with over 8 years of experience in transforming lives. After a decade of career as a Civil Engineer, he realized that his passion was in empowering people. His journey into the human mind began in 2017 by teaching hypnosis and delivering workshops.</p>
+                    
+                    <div class="intro-section">
+                        <h3>Expertise & Specializations</h3>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i>Clinical Hypnotherapy (GHSC Certified)</li>
+                            <li><i class="fas fa-check-circle"></i>NLP & Human Psychology</li>
+                            <li><i class="fas fa-check-circle"></i>Mind Reading & Mentalism</li>
+                            <li><i class="fas fa-check-circle"></i>Personal Development Training</li>
+                        </ul>
+                    </div>
+
+                    <div class="intro-section">
+                        <h3>Workshops & Programs</h3>
+                        <ul>
+                            <li><i class="fas fa-star"></i>Goal Setting & Time Management</li>
+                            <li><i class="fas fa-star"></i>Self-Hypnosis & Memory Improvement</li>
+                            <li><i class="fas fa-star"></i>Study Success & Public Speaking</li>
+                            <li><i class="fas fa-star"></i>Stress & Anxiety Management</li>
+                        </ul>
+                    </div>
+
+                    <div class="intro-achievements">
+                        <div class="achievement-item">
+                            <span class="achievement-number">500+</span>
+                            <span class="achievement-text">Successful Therapy Sessions</span>
+                        </div>
+                        <div class="achievement-item">
+                            <span class="achievement-number">1000+</span>
+                            <span class="achievement-text">Lives Transformed</span>
+                        </div>
+                        <div class="achievement-item">
+                            <span class="achievement-number">8+</span>
+                            <span class="achievement-text">Years of Experience</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
     <div class="overcontainer3" id="courses-section">
         <div class="courses-header">
             <h2 class="title4">Our Courses</h2>
@@ -194,20 +245,24 @@
     </div>
     <div class="container4" id="gallery-section">
         <div class="title5">Photos</div>
-        <div id="slider-wrapper">
-            <div class="slider">
-                <img id="slide1" src="assets/Screenshot 2025-01-20 at 8.08.00 PM.png" alt="Gallery Image 1">
-                <img id="slide2" src="assets/job-5382501_1920.jpg" alt="Gallery Image 2">
-                <img id="slide3" src="assets/4153726.jpg" alt="Gallery Image 3">
-                <img id="slide4" src="assets/job-5382501_1920.jpg" alt="Gallery Image 4">
+        <section class="slider-container">
+            <div class="slider-wrapper">
+                <div class="slider">
+                     <img id = "slide-1" src="assets/Screenshot 2025-01-20 at 8.08.00 PM.png" alt="">
+                     <img id = "slide-2" src="assets/d (3).JPG" alt="">
+                     <img id = "slide-3" src="assets/d (1).JPG" alt="">
+                     <img id = "slide-4" src="assets/WhatsApp Image 2025-01-18 at 16.54.22.jpeg" alt="">
+
+                </div>  
+                <div class="slider-nav">
+                    <a href="#slide-1" ></a>
+                    <a href="#slide-2" ></a>
+                    <a href="#slide-3"></a>
+                    <a href="#slide-4"></a>
+
+                </div>
             </div>
-            <div class="slider-arrow prev">❮</div>
-            <div class="slider-arrow next">❯</div>
-            <div class="slidernav">
-                <a href="#slide1" class="active"></a>
-                
-            </div>
-        </div>
+        </section>
     </div>
     <div class="container5" id="contact-section">
         <h2 class="social-title" style="text-decoration: none;">Follow Us</h2>
@@ -278,5 +333,67 @@
         <span class="modal-close">&times;</span>
         <img class="modal-content" id="modalImage">
     </div>
+    <script>
+        // Slider functionality
+        const slider = document.querySelector('.slider');
+        const prevButton = document.querySelector('.prev');
+        const nextButton = document.querySelector('.next');
+        const slides = document.querySelectorAll('.slider img');
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImage');
+        const modalClose = document.querySelector('.modal-close');
+        
+        let currentIndex = 0;
+        
+        // Update slider position
+        function updateSlider() {
+            slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+            updateNavDots();
+        }
+        
+        // Add click handlers to all slider images
+        slides.forEach(img => {
+            img.addEventListener('click', function() {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+            });
+        });
+        
+        // Close modal when clicking the close button
+        modalClose.addEventListener('click', function() {
+            modal.style.display = "none";
+        });
+        
+        // Close modal when clicking outside the image
+        modal.addEventListener('click', function(event) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        });
+        
+        // Next slide
+        nextButton?.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % slides.length;
+            updateSlider();
+        });
+        
+        // Previous slide
+        prevButton?.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+            updateSlider();
+        });
+        
+        // Update navigation dots
+        function updateNavDots() {
+            const dots = document.querySelectorAll('.slidernav a');
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentIndex);
+            });
+        }
+        
+        // Initialize slider
+        updateSlider();
+    </script>
+    <script src="index.js"></script>
 </body>
 </html>

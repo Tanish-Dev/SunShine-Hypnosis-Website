@@ -444,7 +444,7 @@ body {
     }
 
     .buy-button {
-        width: 100%;
+        width: 80%;
         text-align: center;
     }
 
@@ -586,6 +586,8 @@ body {
         font-size: 2rem;
     }
 }
+
+
 
 .newsletter-container {
     position: relative;
